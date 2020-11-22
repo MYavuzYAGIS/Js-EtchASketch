@@ -104,7 +104,7 @@ main{
             }  
             &::after{
                 color:brown;
-                content: '100';
+                content: '64';
                 font-size: 2rem;
                
                 
@@ -127,8 +127,6 @@ main{
         background-color: antiquewhite;
         & .block{
             background-color: aliceblue;
-            min-height: 2px;
-            border :1px dashed teal;
         }
     }
     & .btn{

@@ -6,6 +6,34 @@ const random = document.querySelector('#random');
 const custom = document.querySelector('#custom');
 const reset = document.querySelector('#reset');
 const slider = document.querySelector('#range');
+let color;
+// Button Settings:
+
+
+reset.addEventListener('click', ()=>{
+    document.querySelectorAll('.block').forEach(e => e.style.backgroundColor='white');
+})
+
+black.addEventListener('click',() =>{
+    color = '#000';
+})
+
+random.addEventListener('click', ()=>{
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    randomColor= `#${randomColor}`;
+    color = randomColor;
+    console.log(randomColor);
+
+})
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19,7 +47,7 @@ function Gridify(size){
         div.className = 'block';
         div.addEventListener('mouseover',()=> {
             // we will modify down here
-            div.style.backgroundColor='black';
+            div.style.backgroundColor=`${color}`;
         });
         container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
         container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
@@ -31,7 +59,7 @@ function Gridify(size){
 
 function sliderx(){
     slider.addEventListener('input', ()=>{
-        sliderDoom()
+        resetall();
         Gridify(slider.value)
         console.log(slider.value);
     });
@@ -39,10 +67,12 @@ function sliderx(){
 }
 
 
-function sliderDoom(){
-    document.querySelectorAll('.block').forEach(e => e.remove());
 
-}
+
+
+
+
+
 
 Gridify(16);
 sliderx()

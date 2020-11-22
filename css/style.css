@@ -104,7 +104,7 @@ main {
 
 #buttons .slidecontainer .slider::after {
   color: brown;
-  content: '100';
+  content: '64';
   font-size: 2rem;
 }
 
@@ -123,8 +123,6 @@ main {
 
 #sketchcontainer .sketchboard .block {
   background-color: aliceblue;
-  min-height: 2px;
-  border: 1px dashed teal;
 }
 
 #sketchcontainer .btn {
