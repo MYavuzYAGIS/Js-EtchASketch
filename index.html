@@ -24,20 +24,20 @@
 <section id="buttons">
 
     <div class="buttons">
-         <button class="btn"> Black </button>
-        <button class="btn"> Random Value </button>
-         <button class="btn"> Custom Color    </button>
+         <button class="btn" id="black"> Black </button>
+        <button class="btn" id="random"> Random Value </button>
+         <button class="btn" id="custom"> Custom Color    </button>
     </div>
     <div class="slidecontainer">
         <p> And how many squares you want to color? </p>
-        <input type="range" min="1" max="100" value="50" class="slider" id="range">
+        <input type="range" min="2" max="100" value="16" class="slider" id="range">
     </div>
 
 </section>
 
  <section id="sketchcontainer">
-    <button class="btn"> Reset</button>
-    <div class="sketchboard"></div>
+    <button class="btn" id="reset"> Reset</button>
+    <div class="sketchboard" id="sketchboard"></div>
     
  </section>
 <footer> 
@@ -46,7 +46,6 @@
     
 
 
-
-    <script src="/app.js"></script>
+<script src="/app.js"></script>
 </body>
 </html>

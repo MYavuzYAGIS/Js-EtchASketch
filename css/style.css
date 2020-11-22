@@ -109,11 +109,22 @@ main {
 }
 
 #sketchcontainer .sketchboard {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  border-radius: 10px;
   margin: 2vh auto;
   border: 1px solid brown;
-  height: 70vh;
-  width: 50vw;
+  height: 900px !important;
+  width: 900px !important;
+  overflow: hidden;
   background-color: antiquewhite;
+}
+
+#sketchcontainer .sketchboard .block {
+  background-color: aliceblue;
+  min-height: 2px;
+  border: 1px dashed teal;
 }
 
 #sketchcontainer .btn {
