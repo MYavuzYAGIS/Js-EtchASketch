@@ -11,7 +11,6 @@ let color;
 // Button Settings:
 
 
-
 black.addEventListener('click',() =>{
     color = '#000';
 })
