@@ -1,1 +1,143 @@
-/* No CSS */
+@font-face {
+  font-family: 'norse';
+  src: url(/assets/fonts/Norse.otf);
+}
+
+:root {
+  font-family: 'norse', sans-serif;
+  --color-borders: rgb(99,140,141);
+}
+
+body {
+  margin: 1% 15% 2%;
+}
+
+body::before {
+  content: '';
+  z-index: -1;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: linear-gradient(115deg, #b57e88, #ddcfc2, #79cfcc);
+}
+
+header {
+  margin: auto;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: brown;
+  letter-spacing: 2px;
+}
+
+main {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  color: beige;
+}
+
+#buttons {
+  text-align: center;
+  margin-top: -3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#buttons .buttons .btn {
+  background-size: cover;
+  background-color: beige;
+  color: #42b9b5;
+  font-size: 2rem;
+  margin: 0 2.2rem;
+  padding: 10px 15px;
+  margin-top: 2vh;
+}
+
+#buttons .slidecontainer {
+  width: 45%;
+  margin: auto;
+}
+
+#buttons .slidecontainer p {
+  margin-top: 2rem;
+  letter-spacing: 1.2px;
+  color: brown;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#buttons .slidecontainer .slider {
+  margin: auto;
+  width: 99%;
+  appearance: none;
+  height: 20px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-animation: .2s;
+  transition: opacity .2s;
+}
+
+#buttons .slidecontainer .slider::-webkit-slider-thumb {
+  width: 25px;
+  height: 25px;
+  color: aqua;
+  cursor: e-resize;
+}
+
+#buttons .slidecontainer .slider:hover {
+  opacity: 1;
+}
+
+#buttons .slidecontainer .slider::before {
+  color: aliceblue;
+  content: '0';
+  color: brown;
+  font-size: 2rem;
+}
+
+#buttons .slidecontainer .slider::after {
+  color: brown;
+  content: '100';
+  font-size: 2rem;
+}
+
+#sketchcontainer .sketchboard {
+  margin: 2vh auto;
+  border: 1px solid brown;
+  height: 70vh;
+  width: 50vw;
+  background-color: antiquewhite;
+}
+
+#sketchcontainer .btn {
+  background-size: cover;
+  background-color: beige;
+  color: #42b9b5;
+  font-size: 2rem;
+  display: block;
+  margin: 1vh auto;
+  padding: 10px 15px;
+  margin-top: 2vh;
+}
+
+footer {
+  display: block;
+  position: static;
+  bottom: 2rem;
+  left: 40%;
+  line-height: 2;
+  font-size: 1rem;
+  color: brown;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+  right: 40%;
+  text-align: center;
+  margin: auto;
+}

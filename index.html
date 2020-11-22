@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css ">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +10,39 @@
     <title>Etch A Sketch Project</title>
 </head>
 <body>
- 
+ <header>
+     <h1 class="title"> Odin - Etch A Sketch</h1>
+ </header>
+ <main class="desc">
+     <p>
+         This is your Sketchboard, well , a bit twisted.
+        Select a size,
+        Hover your mouse on the grids
+        see the result
+     </p>
+ </main>
+<section id="buttons">
+
+    <div class="buttons">
+         <button class="btn"> Black </button>
+        <button class="btn"> Random Value </button>
+         <button class="btn"> Custom Color    </button>
+    </div>
+    <div class="slidecontainer">
+        <p> And how many squares you want to color? </p>
+        <input type="range" min="1" max="100" value="50" class="slider" id="range">
+    </div>
+
+</section>
+
+ <section id="sketchcontainer">
+    <button class="btn"> Reset</button>
+    <div class="sketchboard"></div>
+    
+ </section>
+<footer> 
+    Made by M. Yavuz Yagis as a part of The Odin Project Curriculum
+</footer>
     
 
 
