@@ -3,16 +3,14 @@
 
 const black = document.querySelector('#black');
 const random = document.querySelector('#random');
-const custom = document.querySelector('#custom');
+const custom = document.querySelector('#picker');
 const reset = document.querySelector('#reset');
 const slider = document.querySelector('#range');
+
 let color;
 // Button Settings:
 
 
-reset.addEventListener('click', ()=>{
-    document.querySelectorAll('.block').forEach(e => e.style.backgroundColor='white');
-})
 
 black.addEventListener('click',() =>{
     color = '#000';
@@ -27,12 +25,18 @@ random.addEventListener('click', ()=>{
 })
 
 
+reset.addEventListener('click',()=>{
+    let hayda = document.querySelectorAll('.block');
+    hayda.forEach(div => div.style.backgroundColor = 'white');
+    
+})
 
-
-
-
-
-
+custom.addEventListener('input', ()=>{    
+    
+    let colorz = custom.value;
+    console.log(colorz);
+    color = colorz;
+})
 
 
 
@@ -51,7 +55,7 @@ function Gridify(size){
         });
         container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
         container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-        div.style.border = '1px solid black';
+        div.style.border = '1px dotted gray';
         container.appendChild(div);
     }
 }
@@ -59,7 +63,7 @@ function Gridify(size){
 
 function sliderx(){
     slider.addEventListener('input', ()=>{
-        resetall();
+
         Gridify(slider.value)
         console.log(slider.value);
     });
@@ -69,10 +73,5 @@ function sliderx(){
 
 
 
-
-
-
-
-
-Gridify(16);
+Gridify(slider.value);
 sliderx()

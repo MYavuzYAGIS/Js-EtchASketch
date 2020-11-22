@@ -1,27 +1,20 @@
-# Js-EtchASketch
+# JS Etch A Sketch
+## The Odin Project Assignment
 
 
-CSS Shake Animation :
+ This was one of the three Odin Assignments for Fundamentals module. 
+ In this project I have made a sketchboard.
+ This sketchboard is not hardcoded in terms of number of grids, but it directly takes the input from the slider value.
+
+Also I added the random color picker and custom color palette as extras. 
+
+I am getting used to JS!
 
 
-/* ====== ANIMATIONS ====== */
-.shake {
-  animation: .25s linear .1s 5 forwards shake;
-}
-@keyframes shake {
-  0% {
-    transform: translateX(0rem);
-  }
-  25% {
-    transform: translateX(-2rem);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  75% {
-    transform: translateX(2rem);
-  }
-  100% {
-    transform: translateX(0rem);
-  }
-}
+
+
+### Some ScreenShots 
+![](assets/img/img1.png)
+![](assets/img/img2.png)
+
+
